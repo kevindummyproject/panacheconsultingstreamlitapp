@@ -4,6 +4,7 @@ import json
 from functions import *
 from PIL import Image
 import requests
+import toml
 
 
 def main():
@@ -35,6 +36,20 @@ def main():
 
     title = config_data.get("title", "Panache Consulting")
     st.session_state["send_type"] = config_data.get("send_type", "body")
+
+    if config_data.get("background_color"):
+        # Load the existing TOML configuration
+        with open(".streamlit/config.toml", "r") as file:
+            config = toml.load(file)
+
+        # Modify the configuration
+        config["theme"] = {
+            "backgroundColor": config_data.get("background_color")
+        }  # Add a new section with a key-value pair
+
+        # Write the modified configuration back to the file
+        with open(".streamlit/config.toml", "w") as file:
+            toml.dump(config, file)
 
     st.title(title)
 

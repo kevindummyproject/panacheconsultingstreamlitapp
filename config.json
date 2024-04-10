@@ -1,6 +1,7 @@
 {
   "title": "Panache Consulting",
   "send_type": "body",
+  "background_color": "#bcd4c3",
   "data": [
     {
       "name": "New Client Intake Form",
