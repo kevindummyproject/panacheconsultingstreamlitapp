@@ -1,0 +1,270 @@
+{
+  "title": "Panache Consulting",
+  "send_type": "body",
+  "data": [
+    {
+      "name": "New Client Intake Form",
+      "fields": [
+        {
+          "field_name": "Message",
+          "type": "message",
+          "message": "The following questions will help us to understand the reason for your visit today. Your responses are protected by attorney/client privilege and will be held in strict confidence.",
+          "section": 1
+        },
+        {
+          "field_name": "Name",
+          "message": "Name",
+          "type": "text",
+          "required": true,
+          "section": 1
+        },
+        {
+          "field_name": "Address",
+          "message": "Address",
+          "type": "text",
+          "required": true,
+          "section": 1
+        },
+        {
+          "field_name": "Home",
+          "message": "Home Number",
+          "type": "text",
+          "section": 1,
+          "row_class": "phone",
+          "col": 1,
+          "placeholder": "(XXX)-XXX-XXXX"
+        },
+        {
+          "field_name": "Work",
+          "message": "Work Number",
+          "type": "text",
+          "section": 1,
+          "row_class": "phone",
+          "col": 2,
+          "placeholder": "(XXX)-XXX-XXXX"
+        },
+        {
+          "field_name": "Mobile",
+          "message": "Mobile Phone",
+          "type": "text",
+          "row_class": "phone",
+          "section": 1,
+          "col": 3,
+          "placeholder": "(XXX)-XXX-XXXX"
+        },
+        {
+          "field_name": "Date of Birth",
+          "message": "Date of Birth",
+          "type": "date",
+          "required": true,
+          "section": 1
+        },
+        {
+          "field_name": "Message",
+          "message": "If your mail is returned as undeliverable or telephone service terminated, please provide the name of someone (friend or relative) you believe will always know how to contact you.",
+          "type": "message",
+          "section": 2
+        },
+        {
+          "field_name": "Alternative Name",
+          "type": "text",
+          "message": "Name",
+          "col": 1,
+          "row_class": "alternative1",
+          "section": 2
+        },
+        {
+          "field_name": "Alternative Relationship",
+          "type": "text",
+          "message": "Relationship",
+          "section": 2,
+          "col": 2,
+          "row_class": "alternative1"
+        },
+        {
+          "field_name": "Alternative Address",
+          "type": "text",
+          "message": "Address",
+          "section": 2,
+          "col": 1,
+          "row_class": "alternative2"
+        },
+        {
+          "field_name": "Alternative Phone",
+          "message": "Phone No.",
+          "type": "text",
+          "specific_type": "phone",
+          "col": 2,
+          "row_class": "alternative2",
+          "section": 2,
+          "placeholder": "(XXX)-XXX-XXXX"
+        },
+        {
+          "field_name": "Alternative State",
+          "type": "text",
+          "message": "State & Zip",
+          "section": 2
+        },
+        {
+          "field_name": "Legal Advice",
+          "type": "multiselect-checkbox",
+          "message": "Choose what you may need legal advice about or legal assitance today",
+          "options": [
+            "Probate",
+            "Criminal Record Relief",
+            "Eviction",
+            "Family Law",
+            "Other"
+          ],
+          "required": true,
+          "section": 3
+        },
+        {
+          "field_name": "Message",
+          "type": "message",
+          "message": "Are there any parties involved? (Examples: a friend, an employer, a neighbor, signor or a contract, etc. This should include parties on either side of you issue",
+          "section": 3
+        },
+        {
+          "field_name": "Party",
+          "type": "text",
+          "message": "Party",
+          "section": 3
+        },
+        {
+          "field_name": "Party Relationship",
+          "type": "text",
+          "message": "Relationship",
+          "section": 3
+        },
+        {
+          "field_name": "Document",
+          "type": "radio",
+          "message": "Are there any documents that you think may help us to understand the issue?",
+          "options": ["RAP Sheet", "Lease/Rental Agreement"],
+          "required": true,
+          "section": 3
+        },
+        {
+          "field_name": "Message",
+          "type": "message",
+          "message": "(Any documents you supply that are important to your matter will be photocpied, with your permission, and your originals returned to you at the conclusion of this form.)",
+          "section": 3
+        },
+        {
+          "field_name": "Source",
+          "type": "multiselect-checkbox",
+          "message": "How did you learn of our office",
+          "options": [
+            "A Friend",
+            "In the neighborhood",
+            "Referral",
+            "Formal Client"
+          ],
+          "section": 3
+        },
+        {
+          "field_name": "Signature",
+          "type": "text",
+          "message": "Signature",
+          "section": 3
+        },
+        {
+          "field_name": "Date",
+          "type": "date",
+          "message": "Date",
+          "required": true,
+          "section": 3
+        }
+      ]
+    },
+    {
+      "name": "Form 2",
+      "fields": [
+        {
+          "field_name": "Referral",
+          "message": "Community Navigator Completing Referral Form",
+          "type": "text",
+          "required": true
+        },
+        {
+          "field_name": "Full Name",
+          "message": "Full Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "field_name": "Phone Number",
+          "message": "Phone Number",
+          "type": "text",
+          "specific_type": "phone",
+          "placeholder": "(XXX)-XXX-XXXX"
+        },
+        {
+          "field_name": "Voicemail",
+          "message": "Safe to leave voicemall or text messages?",
+          "type": "radio",
+          "options": ["Yes", "No"]
+        },
+        {
+          "field_name": "Address",
+          "message": "Address (Inlcude City, State, and Zip code)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "field_name": "Email",
+          "type": "text",
+          "specific_type": "email",
+          "message": "E-Mail Address",
+          "placeholder": "example@example.com"
+        },
+        {
+          "field_name": "Country of Residence",
+          "type": "text",
+          "message": "Country of Residence",
+          "required": true
+        },
+        {
+          "field_name": "Preferred Language",
+          "message": "Preferred Language",
+          "type": "text",
+          "required": true
+        },
+        {
+          "field_name": "Date of Birth",
+          "type": "date",
+          "message": "Date of Birth"
+        },
+        {
+          "field_name": "Country of Birth",
+          "type": "text",
+          "message": "Country of Birth"
+        },
+        {
+          "field_name": "Message",
+          "type": "message",
+          "message": "Secondary Contact (We will only call if we cannot get a hold of you after 3 attempts or more, we will not disclose any information, we will just ask them to have you call us."
+        },
+        {
+          "field_name": "Name & Phone Number",
+          "message": "Name & Phone Number",
+          "type": "text"
+        },
+        {
+          "field_name": "Consultation Type",
+          "message": "Consultation Type",
+          "options": ["General Consult", "Expungement"],
+          "required": true,
+          "type": "radio"
+        },
+        {
+          "field_name": "Counties",
+          "message": "Counties that you need Ecpungement in",
+          "type": "multiselect-checkbox",
+          "options": ["Cook County", "Will County", "Others"]
+        }
+      ]
+    }
+  ]
+}
