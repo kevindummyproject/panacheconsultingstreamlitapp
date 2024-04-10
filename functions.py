@@ -417,7 +417,7 @@ def show_sidebar() -> None:
             st.header("Data")
             result = st.session_state.get("result", {})
             for key, value in result.items():
-                st.text(f"{key}: {value}")
+                st.write(f"**{key}**: {value}")
 
 
 def generate_fields(config_data: dict, index: int) -> None:
@@ -471,7 +471,7 @@ def show_confirm(in_form: bool, fields: list, result: dict, form_name: str) -> N
         st.subheader("Data Report:")
         result = st.session_state["result"]
         for key, value in result.items():
-            st.text(f"{key}: {value}")
+            st.write(f"**{key}**: {value if value else 'NA'}")
 
         st.markdown(
             """

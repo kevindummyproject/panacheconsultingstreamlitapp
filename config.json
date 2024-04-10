@@ -242,7 +242,7 @@
           "required": true,
           "section": 1,
           "row_class": "county1",
-          "row": 2
+          "col": 2
         },
         {
           "field_name": "Date of Birth",
@@ -257,7 +257,7 @@
           "type": "text",
           "message": "Country of Birth",
           "section": 1,
-          "row_class": "county1",
+          "row_class": "birth1",
           "col": 2
         },
         {

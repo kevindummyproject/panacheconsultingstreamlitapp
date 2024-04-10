@@ -26,8 +26,8 @@ def main():
     if "countries" not in st.session_state.keys():
         st.session_state["countries"] = get_all_countries()
 
-    # bot_avatar = Image.open("./assets/bot-avatar.png")
-    bot_avatar = Image.open("./assets/Bot.png")
+    # bot_avatar = Image.open("./assets/bot-avatar1.png")
+    bot_avatar = Image.open("./assets/bot-avatar1.png")
 
     config_json = "config.json"
     with open(config_json, "r") as config_file:
