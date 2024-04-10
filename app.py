@@ -133,7 +133,11 @@ def main():
                     )
 
     if st.session_state.get("form_submitted", False):
-        st.success("Thank You! Your data have been sent!", icon="✅")
+        with st.chat_message("assistant", avatar=np.array(bot_avatar)):
+            st.success("Thank You! Your data have been sent!", icon="✅")
+            if st.button("Restart"):
+                st.session_state.clear()
+                st.rerun()
 
 
 if __name__ == "__main__":
