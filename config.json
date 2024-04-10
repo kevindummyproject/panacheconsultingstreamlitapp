@@ -1,5 +1,5 @@
 {
-  "title": "Panache Consulting",
+  "title": "This is Title",
   "send_type": "body",
   "background_color": "#bcd4c3",
   "data": [
@@ -186,84 +186,106 @@
           "field_name": "Referral",
           "message": "Community Navigator Completing Referral Form",
           "type": "text",
-          "required": true
+          "required": true,
+          "section": 1
         },
         {
           "field_name": "Full Name",
           "message": "Full Name",
           "type": "text",
-          "required": true
+          "required": true,
+          "section": 1
         },
         {
           "field_name": "Phone Number",
           "message": "Phone Number",
           "type": "text",
           "specific_type": "phone",
-          "placeholder": "(XXX)-XXX-XXXX"
+          "placeholder": "(XXX)-XXX-XXXX",
+          "section": 1
         },
         {
           "field_name": "Voicemail",
           "message": "Safe to leave voicemall or text messages?",
           "type": "radio",
-          "options": ["Yes", "No"]
+          "options": ["Yes", "No"],
+          "section": 1
         },
         {
           "field_name": "Address",
           "message": "Address (Inlcude City, State, and Zip code)",
           "type": "text",
-          "required": true
+          "required": true,
+          "section": 1
         },
         {
           "field_name": "Email",
           "type": "text",
           "specific_type": "email",
           "message": "E-Mail Address",
-          "placeholder": "example@example.com"
+          "placeholder": "example@example.com",
+          "section": 1
         },
         {
-          "field_name": "Country of Residence",
+          "field_name": "County of Residence",
           "type": "text",
-          "message": "Country of Residence",
-          "required": true
+          "message": "County of Residence",
+          "required": true,
+          "section": 1,
+          "row_class": "county1",
+          "col": 1
         },
         {
           "field_name": "Preferred Language",
           "message": "Preferred Language",
           "type": "text",
-          "required": true
+          "required": true,
+          "section": 1,
+          "row_class": "county1",
+          "row": 2
         },
         {
           "field_name": "Date of Birth",
           "type": "date",
-          "message": "Date of Birth"
+          "message": "Date of Birth",
+          "section": 1,
+          "row_class": "birth1",
+          "col": 1
         },
         {
           "field_name": "Country of Birth",
           "type": "text",
-          "message": "Country of Birth"
+          "message": "Country of Birth",
+          "section": 1,
+          "row_class": "county1",
+          "col": 2
         },
         {
           "field_name": "Message",
           "type": "message",
-          "message": "Secondary Contact (We will only call if we cannot get a hold of you after 3 attempts or more, we will not disclose any information, we will just ask them to have you call us."
+          "message": "Secondary Contact (We will only call if we cannot get a hold of you after 3 attempts or more, we will not disclose any information, we will just ask them to have you call us.",
+          "section": 2
         },
         {
           "field_name": "Name & Phone Number",
           "message": "Name & Phone Number",
-          "type": "text"
+          "type": "text",
+          "section": 2
         },
         {
           "field_name": "Consultation Type",
           "message": "Consultation Type",
           "options": ["General Consult", "Expungement"],
           "required": true,
-          "type": "radio"
+          "type": "radio",
+          "section": 2
         },
         {
           "field_name": "Counties",
-          "message": "Counties that you need Ecpungement in",
+          "message": "Counties that you need Expungement in",
           "type": "multiselect-checkbox",
-          "options": ["Cook County", "Will County", "Others"]
+          "options": ["Cook County", "Will County", "Others"],
+          "section": 2
         }
       ]
     }

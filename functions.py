@@ -389,12 +389,12 @@ def generate_field(
             elif data and specific_type:
                 if specific_type == "email" and not is_valid_email(data):
                     st.warning(
-                        "Please input a valid email format (XXX-XXX-XXXX)",
+                        "Please input a valid email format (example@example.com)",
                         icon="📧",
                     )
                 elif specific_type == "phone" and not is_valid_us_phone_number(data):
                     st.warning(
-                        "Please input a valid phone number format (example@example.com)",
+                        "Please input a valid phone number format (XXX-XXX-XXXX)",
                         icon="📞",
                     )
                 else:
