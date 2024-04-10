@@ -276,6 +276,7 @@
           "field_name": "Consultation Type",
           "message": "Consultation Type",
           "options": ["General Consult", "Expungement"],
+          "index": 0,
           "required": true,
           "type": "radio",
           "section": 2

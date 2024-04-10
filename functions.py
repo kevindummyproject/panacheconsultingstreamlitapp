@@ -202,7 +202,9 @@ def process_field(
         if field_type in option_fields:
             options = [] if "options" not in field.keys() else field["options"]
             if field_type == "radio":
-                data = field_functions[field_type](message, options=options, index=None)
+                data = field_functions[field_type](
+                    message, options=options, index=field.get("index")
+                )
             else:
                 data = field_functions[field_type](message, options=options)
         else:
@@ -372,7 +374,7 @@ def generate_field(
                 with assistant:
                     if field_type == "radio":
                         data = field_functions[field_type](
-                            message, options=options, index=None
+                            message, options=options, index=field.get("index")
                         )
                     else:
                         data = field_functions[field_type](message, options=options)
