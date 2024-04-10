@@ -16,7 +16,7 @@ from email import encoders
 
 warnings.filterwarnings("ignore")
 
-bot_avatar = Image.open("./assets/bot-avatar.png")
+bot_avatar = Image.open("./assets/bot-avatar1.png")
 
 
 def send_email(df):
@@ -169,9 +169,9 @@ def multiselect_checkbox(message: str, options: list) -> list:
 
     st.write(message)
     selected_values = []
-    for option in options:
+    for i, option in enumerate(options):
         if is_others(option):
-            other_value = st.text_input(label="Other")
+            other_value = st.text_input(label="Other", key=f"{option}{i}")
             selected_values.append(other_value)
         else:
             selected = st.checkbox(option)
@@ -300,6 +300,9 @@ def generate_form(
             )
         with col2:
             cancel = st.form_submit_button("Cancel")
+            if cancel:
+                st.session_state.clear()
+                st.rerun()
 
         if submitted:
             error_fields = validate_required(fields, result)
@@ -346,6 +349,10 @@ def generate_form(
                 if len(error_dtypes) != 0:
                     show_dtype_error_message(error_dtypes)
 
+        if cancel_btn:
+            st.session_state.clear()
+            st.rerun()
+
 
 def generate_field(
     field: dict, field_functions: dict, current_field_index: int
@@ -377,10 +384,15 @@ def generate_field(
                             message, options=options, index=field.get("index")
                         )
                     else:
-                        data = field_functions[field_type](message, options=options)
+                        data = field_functions[field_type](
+                            message,
+                            options=options,
+                        )
             else:
                 with assistant:
-                    data = field_functions[field_type](message)
+                    data = field_functions[field_type](
+                        message, placeholder=field.get("placeholder")
+                    )
 
         result = st.session_state.get("result", {})
         with assistant:

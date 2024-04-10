@@ -115,9 +115,6 @@ def main():
                 with st.form("form"):
                     generate_form(config_data["data"], st.session_state["form_index"])
 
-                    if st.session_state.get("result"):
-                        st.write(st.session_state["result"])
-
             if st.session_state.get("form_submitted", False):
                 st.chat_message("assistant", avatar=np.array(bot_avatar)).write(
                     "Thank you"

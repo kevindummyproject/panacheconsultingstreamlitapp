@@ -30,6 +30,7 @@
           "field_name": "Home",
           "message": "Home Number",
           "type": "text",
+          "specific_type": "phone",
           "section": 1,
           "row_class": "phone",
           "col": 1,
@@ -41,6 +42,7 @@
           "type": "text",
           "section": 1,
           "row_class": "phone",
+          "specific_type": "phone",
           "col": 2,
           "placeholder": "(XXX)-XXX-XXXX"
         },
@@ -49,6 +51,7 @@
           "message": "Mobile Phone",
           "type": "text",
           "row_class": "phone",
+          "specific_type": "phone",
           "section": 1,
           "col": 3,
           "placeholder": "(XXX)-XXX-XXXX"
@@ -117,7 +120,6 @@
             "Family Law",
             "Other"
           ],
-          "required": true,
           "section": 3
         },
         {
@@ -142,9 +144,9 @@
           "field_name": "Document",
           "type": "radio",
           "message": "Are there any documents that you think may help us to understand the issue?",
-          "options": ["RAP Sheet", "Lease/Rental Agreement"],
-          "required": true,
-          "section": 3
+          "options": ["RAP Sheet", "Lease/Rental Agreement", "No"],
+          "section": 3,
+          "required": true
         },
         {
           "field_name": "Message",
@@ -160,7 +162,8 @@
             "A Friend",
             "In the neighborhood",
             "Referral",
-            "Formal Client"
+            "Formal Client",
+            "Others"
           ],
           "section": 3
         },
@@ -168,7 +171,8 @@
           "field_name": "Signature",
           "type": "text",
           "message": "Signature",
-          "section": 3
+          "section": 3,
+          "required": true
         },
         {
           "field_name": "Date",
